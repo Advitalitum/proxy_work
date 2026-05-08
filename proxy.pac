@@ -15,8 +15,7 @@ function FindProxyForURL(_, host) {
   const useProxy = domains.has(host) || domainsWithDotPrefix.some(domainWithDotPrefix => host.endsWith(domainWithDotPrefix));
 
   if (useProxy) {
-    
-    return 'PROXY localhost:18080; PROXY localhost:28080; PROXY localhost:8080; DIRECT';
+      return 'PROXY localhost:18080; PROXY localhost:28080; PROXY localhost:8080; DIRECT';
   }
   
   return 'DIRECT';
